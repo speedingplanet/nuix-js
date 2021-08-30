@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+~*.xslx
+.eslintrc*
+.prettierrc*
+tmp/
+
+# Uncomment to never check anything into main/
+# main/*.html
+# main/*.js
+.vscode

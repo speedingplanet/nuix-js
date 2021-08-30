@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting people</title>
+  <script src="click-handler.js"></script>
+  <script>
+
+    // require([... dojo/domReady!], function() {})
+    // dojo.ready()
+
+    window.addEventListener('DOMContentLoaded', () => {
+    // window.addEventListener('load', () => {
+      const button = document.getElementById('greet-button');
+      /*
+      button.addEventListener('click', () => {
+        console.log('arrow: you clicked on the button!');
+      });
+      */
+      button.addEventListener('click', clickHandler);
+      let anotherButton = document.getElementById('another-button');
+      anotherButton.addEventListener('click', anotherHandler);
+    })
+  </script>
+</head>
+
+<body>
+  <div>
+    <label for="your-name">Please enter your name: </label>
+    <input type="text" name="your-name" id="your-name">
+    <button type="button" id="greet-button">Say hello</button>
+    <button type="button" id="another-button">Another button</button>
+  </div>
+
+</body>
+</html>

@@ -1,5 +1,16 @@
+/*
 function getMean(a, b, c, d, e) {
   return (a + b + c + d + e) / 5;
+}
+*/
+
+function getMean(...values) {
+  return (
+    values.reduce(
+      (accumulatedValue, current) => accumulatedValue + current,
+      0
+    ) / values.length
+  );
 }
 
 console.log('The average of 1, 2, 3, 4, 5 is ', getMean(1, 2, 3, 4, 5));

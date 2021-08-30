@@ -31,6 +31,8 @@ const statusLengthTwo = states.every( ( item, index, array ) => {
   }
 } );
 
+const statusLengthTwoShort = states.every(state => state.length === 2);
+
 // Returns an array of matches, [] if none
 const filteredStates = states.filter( ( state ) => state.contains( 'A' ) );
 
@@ -63,8 +65,9 @@ const badMappedPeople = people.map( ( person ) => {
 // Better
 const mappedPeople = people.map( ( person ) => {
   // Shallow copy!
-  // const copiedPerson = { ...person };
-  const copiedPerson = Object.assign( {}, person );
+  // Object.assign(target, merge1, merge2, merge3);
+  const copiedPerson = { ...person };
+  // const copiedPerson = Object.assign( {}, person );
 
   copiedPerson.state = copiedPerson.state.toLowerCase();
   return copiedPerson;
